@@ -6,6 +6,8 @@ SYNOPSIS
         script/myapp_create.pl Dojo edition
         # where "edition" is the edition name you want to install
 
+    See HTML::Dojo for a list of available editions.
+
 DESCRIPTION
     Helper to generate Dojo JavaScript / AJAX library.
 

@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Catalyst-Helper-Dojo
-version:             0.01_2
+version:             0.02000
 abstract:            Helper to generate Dojo JavaScript / AJAX library
 license:             ~
 generated_by:        ExtUtils::MakeMaker version 6.31

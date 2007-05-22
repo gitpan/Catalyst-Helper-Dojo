@@ -5,7 +5,7 @@ use Carp qw/ croak /;
 use File::Spec;
 use HTML::Dojo;
 
-our $VERSION = '0.01_2';
+our $VERSION = '0.02000';
 
 =head1 NAME
 
@@ -15,6 +15,8 @@ Catalyst::Helper::Dojo - Helper to generate Dojo JavaScript / AJAX library
 
     script/myapp_create.pl Dojo edition
     # where "edition" is the edition name you want to install
+
+See L<HTML::Dojo> for a list of available editions.
 
 =head1 DESCRIPTION
 
@@ -36,9 +38,10 @@ directory.
 sub mk_stuff {
     my ( $self, $helper, $edition ) = @_;
     
-    $edition = 'core' if ! defined $edition;
+    my %args;
+    $args{edition} = $edition if defined $edition;
     
-    my $dojo = HTML::Dojo->new( edition => $edition );
+    my $dojo = HTML::Dojo->new( %args );
     
     my $dirs = $dojo->list({
         directories => 1,
